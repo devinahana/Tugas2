@@ -2,9 +2,9 @@
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
 
-**Nama   : Devina Hana Azhara**
-**NPM    : 2106751032**
-**Kelas  : E**
+**Nama   : Devina Hana Azhara**<br/>
+**NPM    : 2106751032**<br/>
+**Kelas  : E**<br/>
 
 <!-- *Read this in other languages: [Indonesian](README.md), [English](README.en.md)* -->
 
