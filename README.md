@@ -68,9 +68,29 @@ Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://
 
 
 ## Virtual Environment
+
 Virtual environment merupakan suatu lingkungan virtual terisolasi yang diciptakan untuk memberikan dependensi bagi suatu proyek. Pada virtual envinronment ini, dapat dilakukan instalasi seluruh *tools* yang diperlukan dengan versi yang diinginkan guna mendukung proyek tersebut. 
 
-Virtual environment diperlukan agar kita dapat menspesifikasi versi dan jenis dari tiap tools yang digunakan. Hal ini dapat mencegah proyek kita dari perubahan atau eror yang tidak diinginkan jika misalnya terdapat pembaharuan pada *tools* tersebut yang mungkin tidak mendukung jalannya proyek. 
+Virtual environment diperlukan agar kita dapat menspesifikasi versi dan jenis dari tiap *tools* yang digunakan. Hal ini dapat mencegah proyek kita dari perubahan atau eror yang tidak diinginkan jika misalnya terdapat pembaharuan pada *tools* tersebut yang mungkin tidak mendukung jalannya proyek. 
+
+## Cara Implementasi MVT pada Django
+
+#### Membuat Aplikasi Katalog
+
+* Membuat repositori baru dengan menggunakan [template](https://github.com/pbp-fasilkom-ui/assignment-repository) yang telah disediakan
+* Melakukan *clone* repositori tersebut pada komputer
+* Membuat dan mengaktifkan *virtual environment* untuk repositori tersebut
+* Melakukan instalasi *dependencies* yang diperlukan
+* Membuat aplikasi django bernama **katalog**
+* Mendaftarkan aplikasi **katalog** tersebut pada settings.py di folder project_django
+
+#### Melakukan Konfigurasi Model
+* Menyiapkan migrasi skema model yang berisikan data CatalogItem pada models.py ke dalam database lokal Django
+* Menerapkan skema model yang telah disiapkan ke dalam database lokal Django
+* Memasukkan data lengkap dari CatalogItem yang berada pada fixtures\initial_catalog_data.json ke dalam database lokal Django
+
+
 
 ## Credits
-Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2021 ([@prakashdivyy](https://gitlab.com/prakashdivyy)) dan [django-template-heroku](https://github.com/laymonage/django-template-heroku) yang ditulis oleh [@laymonage, et al.](https://github.com/laymonage). Template ini dirancang sedemikian rupa sehingga mahasiswa dapat menjadikan template ini sebagai awalan serta acuan dalam mengerjakan tugas maupun dalam berkarya. -->
+
+Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2021 ([@prakashdivyy](https://gitlab.com/prakashdivyy)) dan [django-template-heroku](https://github.com/laymonage/django-template-heroku) yang ditulis oleh [@laymonage, et al.](https://github.com/laymonage). Template ini dirancang sedemikian rupa sehingga mahasiswa dapat menjadikan template ini sebagai awalan serta acuan dalam mengerjakan tugas maupun dalam berkarya.
