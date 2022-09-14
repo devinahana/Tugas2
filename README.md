@@ -14,7 +14,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ![Client Request](/assets/bagan.png)
 
-Ketika client ingin menjalankan suatu web aplikasi berbasis Django, client perlu melakukan request ke HTTP. Request yang masuk tersebut kemudian diproses melalui URL dan diarahkan menuju views yang telah ditentukan oleh developer untuk menangani permintaan. Nantinya, jika terdapat kebutuhan untuk mengakses database, views akan memanggil query ke models kemudian database mengembalikan hasil query ke views. Selanjutnya, hasil proses request tersebut akan di-*mapping* ke dalam file HTML dan dikembalikan sebagai objek respons bagi client.
+Ketika client ingin menjalankan suatu web aplikasi berbasis Django, client perlu melakukan request ke HTTP. Request yang masuk tersebut kemudian diproses melalui URL (urls.py) dan diarahkan menuju views yang telah ditentukan oleh developer untuk menangani permintaan. Nantinya, jika terdapat kebutuhan untuk mengakses database, views akan memanggil query ke models kemudian database mengembalikan hasil query ke views. Selanjutnya, hasil proses request tersebut akan di-*mapping* ke dalam berkas HTML yang telah didefinisikan dan dikembalikan sebagai objek respons bagi client.
 
 
 ## Virtual Environment
@@ -57,7 +57,7 @@ Meskipun demikian, suatu proyek Django tetap dapat berjalan tanpa menggunakan vi
 #### Melakukan Deployment ke Heroku
 
 * Membuat aplikasi baru pada Heroku
-* Menambahkan secret berupa HEROKU_APP_NAME dan HEROKU_API_KEY
+* Menambahkan secret berupa HEROKU_APP_NAME dan HEROKU_API_KEY pada repositori
 * Melakukan deployment dengan menghubungkan repositori github dengan heroku
 
 
