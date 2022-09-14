@@ -1,6 +1,10 @@
-# Template Proyek Django PBP
+# Proyek Django PBP - Tugas 2
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+
+**Nama   : Devina Hana Azhara**
+**NPM    : 2106751032**
+**Kelas  : E**
 
 <!-- *Read this in other languages: [Indonesian](README.md), [English](README.en.md)* -->
 
@@ -60,7 +64,7 @@ Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://
  -->
 
 
-### [Heroku Applicaation Link](https://tugas-2-devina.herokuapp.com/katalog/)
+### [Heroku Application Link](https://tugas-2-devina.herokuapp.com/katalog/)
 
 
 ## Virtual Environment
