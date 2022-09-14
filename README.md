@@ -2,7 +2,7 @@
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
 
-*Read this in other languages: [Indonesian](README.md), [English](README.en.md)*
+<!-- *Read this in other languages: [Indonesian](README.md), [English](README.en.md)* -->
 
 <!-- ## Pendahuluan -->
 
@@ -60,13 +60,13 @@ Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://
  -->
 
 
-## Test
+### [Heroku Applicaation Link](https://tugas-2-devina.herokuapp.com/katalog/)
 
 
 ## Virtual Environment
-Virtual environment merupakan suatu lingkungan virtual terisolasi yang diciptakan untuk memberikan dependensi bagi suatu proyek. Pada virtual envinronment ini, dapat dilakukan instalasi seluruh tools yang diperlukan dengan versi yang diinginkan guna mendukung proyek tersebut. 
+Virtual environment merupakan suatu lingkungan virtual terisolasi yang diciptakan untuk memberikan dependensi bagi suatu proyek. Pada virtual envinronment ini, dapat dilakukan instalasi seluruh *tools* yang diperlukan dengan versi yang diinginkan guna mendukung proyek tersebut. 
 
-Virtual environment diperlukan agar kita dapat menspesifikasi versi dan jenis dari tiap tools yang digunakan. Hal ini dapat mencegah proyek kita dari perubahan atau eror yang tidak diinginkan jika misalnya terdapat pembaharuan pada tools tersebut yang mungkin tidak mendukung jalannya proyek. 
+Virtual environment diperlukan agar kita dapat menspesifikasi versi dan jenis dari tiap tools yang digunakan. Hal ini dapat mencegah proyek kita dari perubahan atau eror yang tidak diinginkan jika misalnya terdapat pembaharuan pada *tools* tersebut yang mungkin tidak mendukung jalannya proyek. 
 
 ## Credits
 Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2021 ([@prakashdivyy](https://gitlab.com/prakashdivyy)) dan [django-template-heroku](https://github.com/laymonage/django-template-heroku) yang ditulis oleh [@laymonage, et al.](https://github.com/laymonage). Template ini dirancang sedemikian rupa sehingga mahasiswa dapat menjadikan template ini sebagai awalan serta acuan dalam mengerjakan tugas maupun dalam berkarya. -->
