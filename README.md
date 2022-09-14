@@ -68,7 +68,7 @@ Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://
 
 
 ## Client Request to Django Web Application
-![Client Request](bagan.png "Client Request to Django Web Application")
+![Client Request](/Tugas2/assets/bagan.png "Client Request to Django Web Application")
 
 
 ## Virtual Environment
