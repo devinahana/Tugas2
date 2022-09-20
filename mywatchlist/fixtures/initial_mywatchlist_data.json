@@ -7,7 +7,7 @@
             "title":"Mencuri Raden Saleh",
             "rating":4,
             "release_date":"25 Agustus 2022",
-            "review":"Oke juga"
+            "review":"Kayaknya seru deh tapi waktu nonton lagi banyak tugas jadi pusing"
         }
 },
 {
@@ -16,7 +16,7 @@
         "fields":{
             "watched":false,
             "title":"Miracle in Cell No 7",
-            "rating":5,
+            "rating":4,
             "release_date":"8 September 2022",
             "review":"Sedih banget parah"
         }
@@ -38,7 +38,7 @@
         "fields":{
             "watched":false,
             "title":"Sayap-Sayap Patah",
-            "rating":2,
+            "rating":1,
             "release_date":"18 Agustus 2022",
             "review":"Kureng"
         }
@@ -52,6 +52,61 @@
             "rating":5,
             "release_date":"11 April 2019",
             "review":"Seru, ceritanya unik"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":6,
+        "fields":{
+            "watched":true,
+            "title":"Please Don't Save Me",
+            "rating":5,
+            "release_date":"10 September 2020",
+            "review":"Good movie to watch when you're depressed"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":7,
+        "fields":{
+            "watched":false,
+            "title":"Top Gun: Maverick",
+            "rating":5,
+            "release_date":"27 Mei 2022",
+            "review":"Keren dan seru banget!"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":8,
+        "fields":{
+            "watched":true,
+            "title":"Minions: The Rise of Gru",
+            "rating":3,
+            "release_date":"28 Juni 2022",
+            "review":"Minionnya lucu si tapi ceritanya so so"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":9,
+        "fields":{
+            "watched":true,
+            "title":"Get Out",
+            "rating":5,
+            "release_date":"29 Maret 2017",
+            "review":"Favorite thriller movie<3"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":10,
+        "fields":{
+            "watched":true,
+            "title":"The Guilty",
+            "rating":2,
+            "release_date":"11 September 2021",
+            "review":"Filmnya agak disturbing dan ga jelas"
         }
     }
 
