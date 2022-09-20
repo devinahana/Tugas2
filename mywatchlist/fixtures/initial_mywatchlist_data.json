@@ -1,0 +1,58 @@
+[
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":1,
+        "fields":{
+            "watched":true,
+            "title":"Mencuri Raden Saleh",
+            "rating":4,
+            "release_date":"25 Agustus 2022",
+            "review":"Oke juga"
+        }
+},
+{
+        "model":"mywatchlist.MyWatchList",
+        "pk":2,
+        "fields":{
+            "watched":false,
+            "title":"Miracle in Cell No 7",
+            "rating":5,
+            "release_date":"8 September 2022",
+            "review":"Sedih banget parah"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":3,
+        "fields":{
+            "watched":false,
+            "title":"Pengabdi Setan 2: Communion",
+            "rating":4,
+            "release_date":"4 Agustus 2022",
+            "review":"Lumayan si, tapi kebanyakan jumpscare jadi agak capek"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":4,
+        "fields":{
+            "watched":false,
+            "title":"Sayap-Sayap Patah",
+            "rating":2,
+            "release_date":"18 Agustus 2022",
+            "review":"Kureng"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":5,
+        "fields":{
+            "watched":true,
+            "title":"Another Child",
+            "rating":5,
+            "release_date":"11 April 2019",
+            "review":"Seru, ceritanya unik"
+        }
+    }
+
+]
