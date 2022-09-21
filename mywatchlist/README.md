@@ -72,6 +72,6 @@ Berbeda dengan HTML, XML dan JSON merupakan dua format yang paling umum dalam me
 
 ## Postman
 
-![Postman HTML](/assets/postman_html.jpg)
-![Postman XML](/assets/postman_xml.jpg)
-![Postman JSON](/assets/postman_json.jpg)
+![Postman HTML](/mywatchlist/assets/postman_html.jpg)
+![Postman XML](/mywatchlist/assets/postman_xml.jpg)
+![Postman JSON](/mywatchlist/assets/postman_json.jpg)
