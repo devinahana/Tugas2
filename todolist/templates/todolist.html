@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+
+  <h1>To Do List</h1>
+
+  <h5>Username: {{todo.user.get_username()}}</h5>
+  <!-- kalau gabisa coba ganti jadi todolist:create_task -->
+  <!-- <button><a href="{% url 'todolist:create-task' %}">Tambah Task Baru</a></button> -->
+
+
+  <table>
+    
+    <tr>
+      <th>Date Created</th>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+
+    {% for todo in todo_list %}
+      <tr>
+        <th>{{todo.date}}</th>
+        <th>{{todo.title}}</th>
+        <th>{{todo.description}}</th>
+      </tr>
+    {% endfor %}
+  </table>
+  <button><a href="{% url 'wishlist:logout' %}">Logout</a></button>
+
+ {% endblock content %}
