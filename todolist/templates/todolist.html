@@ -14,6 +14,8 @@
       <th>Title</th>
       <th>Description</th>
       <th>Status</th>
+      <th>Change Status</th>
+      <th>Delete Task</th>
     </tr>
     
     {% for todo in todo_list %}
@@ -21,7 +23,17 @@
       <td>{{todo.date}}</td>
       <td>{{todo.title}}</td>
       <td>{{todo.description}}</td>
-      <td>{{todo.is_finished}}</td>
+      <td>
+        {% if todo.is_finished %} Done
+        {% else %} Not Done
+        {% endif %}
+      </td>
+      <td>
+        <button><a href="{% url 'todolist:change_status' todo.pk %}">Finish Task</a></button>
+      </td>
+      <td>
+        <button><a href="{% url 'todolist:delete_task' todo.pk %}">Delete Task</a></button>
+      </td>
     </tr>
     {% endfor %}
   </table>

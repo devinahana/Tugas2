@@ -8,7 +8,6 @@ from todolist.models import Task
 from todolist.forms import TaskForm
 from datetime import date
 
-
 # Create your views here.
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
@@ -20,9 +19,33 @@ def show_todolist(request):
     }
     return render(request, "todolist.html", context)
 
-# def change_status(request):
-#     # Task.objects.filter(user=request.user).is_finished = True
+def create_task(request):
+    form = TaskForm()
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            task = Task(
+                date = str(date.today()),
+                title = form.cleaned_data["task_title"],
+                description = form.cleaned_data["task_description"],
+                user = request.user,
+            )
+            task.save()
+            messages.success(request, 'Task berhasil dibentuk')
+            return redirect('todolist:show_todolist')
+    context = {"form": form}
+    return render(request, 'create_task.html', context)
 
+def delete_task(request, id):
+    Task.objects.get(pk=id).delete()
+    return redirect('todolist:show_todolist')
+
+def change_status(request, id):
+    task = Task.objects.get(pk=id) 
+    if (not task.is_finished):
+        task.is_finished = True
+    task.save()
+    return redirect('todolist:show_todolist')
 
 def register(request):
     form = UserCreationForm()
@@ -54,20 +77,4 @@ def logout_user(request):
     messages.info(request, 'Berhasil logout')
     return redirect('todolist:login')
 
-def create_task(request):
-    form = TaskForm()
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            task = Task(
-                date = str(date.today()),
-                title = form.cleaned_data["task_title"],
-                description = form.cleaned_data["task_description"],
-                user = request.user,
-            )
-            task.save()
-            messages.success(request, 'Task berhasil dibentuk')
-            return redirect('todolist:show_todolist')
-    context = {"form": form}
-    return render(request, 'create_task.html', context)
 

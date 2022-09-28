@@ -1,24 +1,22 @@
-# Proyek Django PBP - Tugas 3
+# Proyek Django PBP - Tugas 4
 
 **Nama   : Devina Hana Azhara**<br/>
 **NPM    : 2106751032**<br/>
 **Kelas  : E**<br/>
 
 
-### [MyWatchList HTML](https://tugas-2-devina.herokuapp.com/mywatchlist/html/)
-### [MyWatchList XML](https://tugas-2-devina.herokuapp.com/mywatchlist/xml/)
-### [MyWatchList JSON](https://tugas-2-devina.herokuapp.com/mywatchlist/json/)
+### [todolist HTML](https://tugas-2-devina.herokuapp.com/todolist/html/)
+### [todolist XML](https://tugas-2-devina.herokuapp.com/todolist/xml/)
+### [todolist JSON](https://tugas-2-devina.herokuapp.com/todolist/json/)
 
 
-## Perbedaan antara JSON, XML, dan HTML
+## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
+CSRF Token merupakan suatu nilai/token unik dan rahasia yang digunakan untuk mencegah serangan dari CSRF (Cross-Site Request Forgery (CSRF)). Token ini perlu dibuat unik setiap sesi *user* dan perlu divalidasi saat terdapat *request* guna menghindari penyerangan atau peretasan data *user*.
+Dalam form, implementasi token CSRF ini dikirimkan menggunakan metode POST. Nantinya, token ini akan disisipkan sebagai parameter saat terdapat *request* yang dilakukan oleh klien. Jika CSRF tidak diimplementasikan dalam form, data *user* akan lebih rentan terhadap serangan dan keamanannya berkurang.
 
-Hypertext Markup Languange atau biasa dikenal dengan HTML merupakan bahasa standar yang digunakan untuk membuat halaman suatu situs web. HTML berisikan kumpulan *tag* yang di dalamnya berisikan *attribute* yang merupakan data-data yang ingin ditampilkan pada halaman web. Umumnya, HTML ini dipakai untuk menampilkan data dan bukan untuk menyimpan suatu data.
-Berbeda dengan HTML, XML dan JSON merupakan dua format yang paling umum dalam melakukan penyimpanan serta pertukaran data (*data delivery*). XML (*Extensible Markup Language*) merupakan bahasa *markup* yang telah disesuaikan untuk menyimpan data. XML mempermudah pertukaran data dengan membentuk konfigurasi yang dinamis, pemuatan variabel, dan menyediakan struktur data yang jelas. Sementara itu, JSON (*JavaScript Object Notation*) merupakan sebuat format map (key - value) yang sering digunakan untuk menyimpan, membaca, ataupun menukar informasi dari server. JSON dikenal karena kemudahan, kejelasan, dan kecepatannnya dalam pemodelan data sebab ringan dan menggunakan sedikit memori. 
+## Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
 
-
-## Fungsi *Data Delivery*
-
-*Data delivery* diperlukan dalam pengimplementasian sebuah platform untuk mempermudah proses pengiriman data dari satu *stack* ke *stack* lainnya. Data yang dikirimkan tersebut dapat bermacam-macam bentuknya, mulai dari HTML, XML, JSON, dan sebagainya. Maka dari itu, guna terciptanya efisiensi, proses *data delivery* ini menjadi penting untuk dilakukan.
+## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
 
 
 ## Cara Implementasi 
@@ -30,39 +28,37 @@ Berbeda dengan HTML, XML dan JSON merupakan dua format yang paling umum dalam me
 * Melakukan instalasi *dependencies* yang dibutuhkan dengan perintah `pip install -r requirements.txt` 
 
 
-#### Membuat Aplikasi Mywatchlist
+#### Membuat Aplikasi Todolist
 
-* Membuat aplikasi django bernama **mywatchlist** dengan perintah `python manage.py startapp mywatchlist`
-* Mendaftarkan aplikasi **mywatchlist** tersebut pada `settings.py` di folder `project_django`
-* Mendaftarkan aplikasi **mywatchlist** ke dalam urls.py pada folder `project_django`
+* Membuat aplikasi django bernama **todolist** dengan perintah `python manage.py startapp todolist`
+* Mendaftarkan aplikasi **todolist** tersebut pada `settings.py` di folder `project_django`
+* Mendaftarkan aplikasi **todolist** ke dalam urls.py pada folder `project_django`
 
 #### Melakukan Konfigurasi Model
 
-* Membuat skema model `MyWatchList` yang memiliki atribut-atribut watched, title, rating, release_date, dan review pada `models.py`
-* Melakukan migrasi data tersebut ke dalam database Django lokal
-* Membuat folder bernama `fixtures` dan membuat berkas bernama `initial_mywatchlist_data.json`
-* Mengisi berkas `initial_mywatchlist_data.json` dengan data-data film sesuai atribut yang telah dibuat
-* Memasukkan data tersebut ke dalam database Django lokal dengan perintah `python manage.py loaddata initial_mywatchlist_data.json`
+* Membuat skema model `todolist` yang memiliki atribut-atribut user, date, title, dan description pada `models.py`
+# Mengimport `User` dan menggunakan tipe `models.ForeignKey` untuk menunjang atribut user 
+* Melakukan migrasi data tersebut ke dalam database Django lokal dengan perintah `python manage.py makemigrations` dilanjutkan dengan `python manage.py migrate`
 
-#### Menghubungkan Models, Views, dan Templates 
+#### Menghubungkan Models, Views, dan Templates ,
 
-* Membuat fungsi `show_mywatchlist(request)` pada views.py untuk melakukan pengambilan data dari model `MyWatchList`
-* Membentuk `urls.py` di dalam folder aplikasi **mywatchlist** untuk melakukan *routing* terhadap fungsi `show_mywatchlist(request)` pada `views.py` dengan memanggil method path()
-* Membuat folder bernama `templates` dan membuat berkas `mywatchlist.html`
-* Membentuk tabel pada berkas `mywatchlist.html` yang diisi dengan data-data film dari model `MyWatchList`
+* Membuat fungsi `show_todolist(request)` pada views.py untuk melakukan pengambilan data dari model `todolist`
+* Membentuk `urls.py` di dalam folder aplikasi **todolist** untuk melakukan *routing* terhadap fungsi `show_todolist(request)` pada `views.py` dengan memanggil method path()
+* Membuat folder bernama `templates` dan membuat berkas `todolist.html`
+* Membentuk tabel pada berkas `todolist.html` yang diisi dengan data-data Task dari model `todolist`
 
-#### Mengembalikan Data dalam Bentuk XML dan JSON
+##### Menerapkan login dan logout bagi User
 
-* Membuat fungsi `show_mywatchlist_xml(request)` pada `views.py` untuk melakukan pengembalian data dalam bentuk XML
-* Membuat fungsi `show_mywatchlist_json(request)` pada `views.py` untuk melakukan pengembalian data dalam bentuk JSON  
-* Melakukan *routing* terhadap fungsi `show_mywatchlist_xml(request)`, dan `show_mywatchlist_json(request)` pada `views.py` dengan memanggil method path()
+* Mengimport modul-modul yang dibutuhkan untuk membantu penerapan login serta logout, seperti `authenticate`, `login`, `logout`, `login_required`, `UserCreationForm`, `redirect`, `messages`, dan sebagainya
+* Membuat fungsi register yang menerima parameter request
+
+
 
 #### Melakukan Deployment ke Heroku
 
-* Menambahkan `&& python manage.py loaddata initial_mywatchlist_data.json` pada Procfile
 * Melakukan deployment dengan menghubungkan repositori github dengan heroku
 
-### Membentuk Unit Test
+#### Membentuk Unit Test
 
 * Membentuk berkas `tests.py`
 * Mengimport `TestCase`
@@ -72,6 +68,6 @@ Berbeda dengan HTML, XML dan JSON merupakan dua format yang paling umum dalam me
 
 ## Postman
 
-![Postman HTML](/mywatchlist/assets/postman_html.jpg)
-![Postman XML](/mywatchlist/assets/postman_xml.jpg)
-![Postman JSON](/mywatchlist/assets/postman_json.jpg)
+![Postman HTML](/todolist/assets/postman_html.jpg)
+![Postman XML](/todolist/assets/postman_xml.jpg)
+![Postman JSON](/todolist/assets/postman_json.jpg)
