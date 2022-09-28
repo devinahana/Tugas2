@@ -6,11 +6,13 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from todolist.models import Task
 from todolist.forms import TaskForm
+from datetime import date
+
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
-    data = Task.objects.all()
+    data = Task.objects.filter(user=request.user).all()
     context = {
         'todo_list': data,
         'name': 'Devina Hana',
@@ -18,15 +20,18 @@ def show_todolist(request):
     }
     return render(request, "todolist.html", context)
 
+# def change_status(request):
+#     # Task.objects.filter(user=request.user).is_finished = True
+
+
 def register(request):
     form = UserCreationForm()
-
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Akun telah berhasil dibuat!')
-            return redirect('wishlist:login')
+            return redirect('todolist:login')
     
     context = {'form':form}
     return render(request, 'register.html', context)
@@ -38,7 +43,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('wishlist:show_wishlist')
+            return redirect('todolist:show_todolist')
         else:
             messages.info(request, 'Username atau Password salah!')
     context = {}
@@ -46,10 +51,23 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return redirect('wishlist:login')
+    messages.info(request, 'Berhasil logout')
+    return redirect('todolist:login')
 
-def crate_task(request):
-    
-    context = {}
+def create_task(request):
+    form = TaskForm()
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            task = Task(
+                date = str(date.today()),
+                title = form.cleaned_data["task_title"],
+                description = form.cleaned_data["task_description"],
+                user = request.user,
+            )
+            task.save()
+            messages.success(request, 'Task berhasil dibentuk')
+            return redirect('todolist:show_todolist')
+    context = {"form": form}
     return render(request, 'create_task.html', context)
 

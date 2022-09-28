@@ -5,9 +5,9 @@ from katalog.models import CatalogItem
 def show_katalog(request):
     data_barang_katalog = CatalogItem.objects.all()
     context = {
-    'list_katalog': data_barang_katalog,
-    'nama': 'Devina Hana',
-    'id': '2106751032',
+        'list_katalog': data_barang_katalog,
+        'nama': 'Devina Hana',
+        'id': '2106751032',
     }
     return render(request, "katalog.html", context)
 

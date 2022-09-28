@@ -1,6 +1,5 @@
-from socket import fromshare
 from django import forms
 
 class TaskForm(forms.Form):
-    task_title = forms.CharField()
-    task_description = forms.CharField()
+    task_title = forms.CharField(label="Title")
+    task_description = forms.CharField(label="Description", widget=forms.Textarea)
