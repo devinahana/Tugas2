@@ -5,17 +5,14 @@
 **Kelas  : E**<br/>
 
 ### Link Deployment Heroku
-#### [todolist](https://tugas-2-devina.herokuapp.com/todolist/)
-#### [todolist/login](https://tugas-2-devina.herokuapp.com/todolist/login/)
-#### [todolist/register](https://tugas-2-devina.herokuapp.com/todolist/login/)
-#### [todolist/create-task](https://tugas-2-devina.herokuapp.com/todolist/create-task/)
+#### [App todolist](https://tugas-2-devina.herokuapp.com/todolist/)
 
 ## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
 CSRF Token merupakan suatu nilai/token unik dan rahasia yang digunakan untuk mencegah serangan dari CSRF (Cross-Site Request Forgery (CSRF)). Token ini perlu dibuat unik setiap sesi *user* dan perlu divalidasi saat terdapat *request* guna menghindari penyerangan atau peretasan data *user*.
 Dalam form, implementasi token CSRF ini dikirimkan menggunakan metode POST. Nantinya, token ini akan disisipkan sebagai parameter saat terdapat *request* yang dilakukan oleh klien. Jika CSRF tidak diimplementasikan dalam form, data *user* akan lebih rentan terhadap serangan dan keamanannya berkurang.
 
-## Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
-Tentunya kita dapat membuat elemen <form> secara manual. Generator seperti {{form.as_table}} yang kita gunakan di sini hanya berguna sebagai abstraksi untuk menampilkan form dalam bentuk tabel dengan tujuan memudahkan kita. Selain terdapat generator {{form.as_table}}, terdapat juga generator lain seperti {{ form.as_div }} (tag <div>), {{ form.as_p }} (tag <p>), dan {{ form.as_ul }} (tag <li>) yang juga dapat kita gunakan. Meskipun demikian, jika semua generator tersebut belum dapat memenuhi kebutuhan kita, kita dapat membuat form secara manual dengan bantuan elemen-elemen input atau botton yang dilengkapi dengan berbagai atribut seperti *style*, *type*, dan sebagainya. 
+## Apakah kita dapat membuat elemen \<form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
+Tentunya kita dapat membuat elemen <form> secara manual. Generator seperti {{form.as_table}} yang kita gunakan di sini hanya berguna sebagai abstraksi untuk menampilkan form dalam bentuk tabel dengan tujuan memudahkan kita. Selain terdapat generator {{form.as_table}}, terdapat juga generator lain seperti {{ form.as_div }} (tag \<div>), {{ form.as_p }} (tag \<p>), dan {{ form.as_ul }} (tag \<li>) yang juga dapat kita gunakan. Meskipun demikian, jika semua generator tersebut belum dapat memenuhi kebutuhan kita, kita dapat membuat form secara manual dengan bantuan elemen-elemen input atau botton yang dilengkapi dengan berbagai atribut seperti *style*, *type*, dan sebagainya. 
 
 ## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
 Saat *user* melakukan submisi melalui HTML form, HTTP *request* method POST yang telah dideklarasikan pada tag form akan dikirimkan kepada server. Server kemudian akan menerima *request* tersebut melalui `views.py`. `views.py` ini berisi fungsi-fungsi yang digunakan untuk menyimpan data yang telah diinput ke dalam database dan menghubungkannya dengan models. `views.py` kemudian juga akan mengembalikan data yang telah disimpan tersebut pada template yang disimpan dalam suatu berkas HTML yang ditampilkan kepada pengguna.
