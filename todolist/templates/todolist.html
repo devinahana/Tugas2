@@ -4,12 +4,12 @@
 
   <h1>To Do List</h1>
 
-  <h5>Username: {{user.username}}</h5>
+  <h5>Hi {{user.username}}!</h5>
   
   
-  <table border="1" style="margin: 10px">
+  <table border="1" style="margin:10px;width:95%">
     
-    <tr>
+    <tr style="text-align:center">
       <th>Date Created</th>
       <th>Title</th>
       <th>Description</th>
@@ -19,7 +19,7 @@
     </tr>
     
     {% for todo in todo_list %}
-    <tr>
+    <tr style="text-align:center">
       <td>{{todo.date}}</td>
       <td>{{todo.title}}</td>
       <td>{{todo.description}}</td>
