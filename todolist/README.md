@@ -4,8 +4,8 @@
 **NPM    : 2106751032**<br/>
 **Kelas  : E**<br/>
 
-### Link Deployment Heroku
-#### [App todolist](https://tugas-2-devina.herokuapp.com/todolist/)
+
+#### [Link Heroku Todolist](https://tugas-2-devina.herokuapp.com/todolist/)
 
 ## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
 CSRF Token merupakan suatu nilai/token unik dan rahasia yang digunakan untuk mencegah serangan dari CSRF (Cross-Site Request Forgery (CSRF)). Token ini perlu dibuat unik setiap sesi *user* dan perlu divalidasi saat terdapat *request* guna menghindari penyerangan atau peretasan data *user*.
@@ -31,7 +31,7 @@ Saat *user* melakukan submisi melalui HTML form, HTTP *request* method POST yang
 
 #### Melakukan Konfigurasi Model
 * Membuat skema model `todolist` yang memiliki atribut-atribut user, date, title, dan description pada `models.py`
-# Mengimport `User` dan menggunakan tipe `models.ForeignKey` untuk menunjang atribut user 
+* Mengimport `User` dan menggunakan tipe `models.ForeignKey` untuk menunjang atribut user 
 * Melakukan migrasi data tersebut ke dalam database Django lokal dengan perintah `python manage.py makemigrations` dilanjutkan dengan `python manage.py migrate`
 
 #### Menghubungkan Models, Views, dan Templates ,
