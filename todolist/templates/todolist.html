@@ -14,9 +14,11 @@
     
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);    
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06); 
+      background-color: rgb(7, 5, 5); 
+      color: white;  
     }
-    
+
     .container {
       padding: 2px 16px;
     }
@@ -82,8 +84,8 @@
             {% else %}
             <p style="font-weight:bold; color:red;">Not Done</p>
             {% endif %}
-            <button type="button" class="btn btn-dark" style="float:left; color: pink;"><a class="text-light" href="{% url 'todolist:change_status' todo.pk %}" style="text-decoration:solid ">Finish Task</a></button>
-            <button type="button" class="btn btn-dark" style="float:right; color: pink;"><a class="text-light" href="{% url 'todolist:delete_task' todo.pk %}" style="text-decoration:solid ">Delete Task</a></button>
+            <button type="button" class="btn btn-dark" style="float:left;"><a class="text-light" href="{% url 'todolist:change_status' todo.pk %}" style="text-decoration:solid ">Finish Task</a></button>
+            <button type="button" class="btn btn-dark" style="float:right;"><a class="text-light" href="{% url 'todolist:delete_task' todo.pk %}" style="text-decoration:solid ">Delete Task</a></button>
           </div>
         </div>
       {% endfor %}
