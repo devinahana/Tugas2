@@ -19,11 +19,7 @@
           $.ajax({
             type: 'POST',
             url: '{% url "todolist:add_task" %}',
-            data: data, 
-            // success: () => {
-            //   alert("Done!")
-            //   fetchData()
-            // },
+            data: data,
             dataType: 'json'
           });
 
@@ -139,7 +135,7 @@
   
   <div class="row row-cols-1 row-cols-md-3 g-4 md:justify-end gap-4" id="main-div"></div>
   
-  <div class="modal fade modal-dialog modal-dialog-centered" id="addTask" tabindex="-1" aria-labelledby="addTaskLabel" aria-hidden="true">
+  <div class="modal fade" id="addTask" tabindex="-1" aria-labelledby="addTaskLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

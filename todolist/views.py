@@ -47,8 +47,7 @@ def add_task(request):
             user=request.user,
         )
         new_task.save()
-    redirect('todolist:show_todolist_ajax')
-    return HttpResponse('')
+    return redirect('todolist:show_todolist_ajax')
     
 
 def create_task(request):
