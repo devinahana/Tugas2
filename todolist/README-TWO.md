@@ -4,9 +4,6 @@
 **NPM    : 2106751032**<br/>
 **Kelas  : E**<br/>
 
-
-#### [Link Heroku Todolist](https://tugas-2-devina.herokuapp.com/todolist/)
-
 ## Jelaskan perbedaan antara asynchronous programming dengan synchronous programming
 ### Asynchronous Programming
 Asynchronous programming merupakan pemrograman berbasis multithread. Programming jenis ini memungkinkan beberapa operasi yang ada dapat berjalan secara beriringan tanpa perlu menunggu operasi lainnya selesai terlebih dahulu. Hal ini disebabkan program tidak berjalan secara sekuensial, melainkan secara paralel. Berbagai request yang masuk ini nantinya dapat berjalan secara independen tanpa memengaruhi satu sama lain.
