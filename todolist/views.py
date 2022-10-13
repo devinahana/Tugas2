@@ -30,7 +30,7 @@ def show_todolist_ajax(request):
     context = {
         'todo_list': data,
     } 
-    return render(request, "todolist_ajax.html", context)
+    return render(request, "todolist.html", context)
 
 def show_json(request):
     data = Task.objects.filter(user=request.user).all()
