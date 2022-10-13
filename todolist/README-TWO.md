@@ -21,27 +21,6 @@ Contoh penerapan event-driven programming pada tugas ini adalah ketika button de
 ## Jelaskan penerapan asynchronous programming pada AJAX.
 AJAX merupakan suatu teknik yang memungkinkan suatu web untuk melakukan *update* secara asinkronus. Ketika terjadi suatu perubahan yang tidak terlalu besar, kita tidak perlu untuk me-reload seluruh page sebab kita dapat meminta AJAX untuk melakukan request kepada server dan mengirimkan informasi perubahan tersebut. Nantinya program akan terus berjalan tanpa perlu menunggu respons tersebut sampai terlebih dahulu. Barulah ketika respons telah didapatkan, program akan secara otomatis melakukan *update* terhadap halaman web.
 
- AJAX GET
-
- Buatlah view baru yang mengembalikan seluruh data task dalam bentuk JSON.
- Buatlah path /todolist/json yang mengarah ke view yang baru kamu buat.
- Lakukan pengambilan task menggunakan AJAX GET.
- AJAX POST
-
- Buatlah sebuah tombol Add Task yang membuka sebuah modal dengan form untuk menambahkan task.
-
-Untuk mempelajari lebih lanjut mengenai modal Bootstrap (v5.2), silakan baca dokumentasi berikut: Modal · Bootstrap v5.2.
-
- Buatlah view baru untuk menambahkan task baru ke dalam database.
-
- Buatlah path /todolist/add yang mengarah ke view yang baru kamu buat.
-
- Hubungkan form yang telah kamu buat di dalam modal kamu ke path /todolist/add
-
- Tutup modal setelah penambahan task telah berhasil dilakukan.
-
- Lakukan refresh pada halaman utama secara asinkronus untuk menampilkan list terbaru tanpa reload seluruh page.
-
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 * Membuat fungsi show_json pada views.py yang akan mengembalikan data Task dalam bentuk json
 * Menambahkan path json/ pada urls.py yang terhubung dengan fungsi show_json
