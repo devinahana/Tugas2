@@ -20,10 +20,11 @@
             type: 'POST',
             url: '{% url "todolist:add_task" %}',
             data: data,
-            dataType: 'json'
+            success: function() {
+              $.get("/todolist/json", update)
+            },
           });
 
-          fetchData();
         }
       
         function update(data) {
