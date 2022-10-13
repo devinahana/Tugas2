@@ -13,17 +13,6 @@ from django.core import serializers
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-# Create your views here.
-# @login_required(login_url='/todolist/login/')
-# def show_todolist(request):
-#     data = Task.objects.filter(user=request.user).all()
-#     context = {
-#         'todo_list': data,
-#         'name': 'Devina Hana',
-#         'id': '2106751032',
-#     }
-#     return render(request, "todolist.html", context)
-
 @login_required(login_url='/todolist/login/')
 def show_todolist_ajax(request):
     data = Task.objects.filter(user=request.user).all()
